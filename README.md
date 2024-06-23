@@ -1,2 +1,0 @@
-# OsmaryBarriga.io
-Portafolio
