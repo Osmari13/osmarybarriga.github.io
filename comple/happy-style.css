@@ -1,0 +1,53 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: arial;
+	font-size: 1.2rem;
+	min-height: 100%;
+}
+html{
+	height: 100%
+}
+
+.layout{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"nav"
+	"header"
+	"barmenu"
+	"container"
+}
+
+.nav{
+	grid-area: nav;
+	background-color: red;
+}
+.card{
+	grid-area: header;
+	background-color: blue;
+}
+.content{
+	grid-area: container;
+	background-color: violet;
+}
+.sidebar{
+	grid-area: barmenu;
+	background-color: green;
+}
+
+
+
+@media (min-width: 500px){
+	.layout{
+		grid-template:
+		'header header'
+		'barmenu header'
+		'barmenu container'
+	    'footer footer'; 
+	}
+}
